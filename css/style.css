@@ -71,7 +71,7 @@ header .searchbar input {
 }
 header .searchbar input[type=search]:focus {
   outline: none !important;
-  border: 2px solid rgb(63, 170, 243);
+  border: 2px solid rgb(101, 85, 241);
 }
 header .profile {
   justify-self: end;
@@ -129,5 +129,34 @@ header .newButtons button {
 }
 
 main {
+  padding: 20px;
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  grid-template-rows: 2rem 1fr 2rem 2rem 1fr;
+  -moz-column-gap: 1.5rem;
+       column-gap: 1.5rem;
+  color: rgb(220, 220, 220);
   background-color: rgb(54, 57, 63);
+}
+main .sectionName {
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+main .projectWrapper {
+  grid-area: 2/1/6/2;
+}
+main .projectWrapper p {
+  background-color: rgb(47, 49, 54);
+}
+main .announcementsWrapper p {
+  background-color: rgb(47, 49, 54);
+}
+main .trendingName {
+  grid-area: 4/2/5/3;
+}
+main .tredingWrapper {
+  grid-area: 5/2/6/3;
+}
+main .tredingWrapper p {
+  background-color: rgb(47, 49, 54);
 }/*# sourceMappingURL=style.css.map */
