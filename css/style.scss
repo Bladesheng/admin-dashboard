@@ -160,6 +160,11 @@ header {
   }
 }
 
+%announcement-trending-wrapper {
+  border-radius: 5px;
+  background-color: $background-secondary-color;
+}
+
 main {
   padding: 20px;
   display: grid;
@@ -170,7 +175,7 @@ main {
   color: $font-primary-color;
   background-color: $background-primary-color;
 
-  .sectionName {
+  h1 {
     font-weight: 700;
     font-size: 1.2rem;
   }
@@ -185,19 +190,32 @@ main {
   }
 
   .announcementsWrapper {
+    @extend %announcement-trending-wrapper;
+    padding: 6%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    h3 {
+      font-size: 1rem;
+    }
     p {
-      background-color: $background-secondary-color;
+      font-size: 0.85rem;
+    }
+    .horizontalLine {
+      margin: 5% 0;
+
+      border-top: 2px solid $font-secondary-color;
+      border-radius: 2px;
     }
   }
-
+  
   .trendingName {
     grid-area: 4 / 2 / 5 / 3;
   }
   .tredingWrapper {
     grid-area: 5 / 2 / 6 / 3;
-
-    p {
-      background-color: $background-secondary-color;
-    }
+    
+    @extend %announcement-trending-wrapper;
   }
 }
