@@ -160,7 +160,7 @@ header {
   }
 }
 
-%announcement-trending-wrapper {
+%card-background {
   border-radius: 5px;
   background-color: $background-secondary-color;
 }
@@ -189,8 +189,9 @@ main {
     }
   }
 
+
   .announcementsWrapper {
-    @extend %announcement-trending-wrapper;
+    @extend %card-background;
     padding: 6%;
     display: flex;
     flex-direction: column;
@@ -198,9 +199,11 @@ main {
 
     h3 {
       font-size: 1rem;
+      cursor: pointer;
     }
     p {
       font-size: 0.85rem;
+      cursor: pointer;
     }
     .horizontalLine {
       margin: 5% 0;
@@ -210,12 +213,41 @@ main {
     }
   }
   
+  
   .trendingName {
     grid-area: 4 / 2 / 5 / 3;
   }
   .tredingWrapper {
     grid-area: 5 / 2 / 6 / 3;
+        
+    padding: 6%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    @extend %card-background;
     
-    @extend %announcement-trending-wrapper;
+    .trendingProfile {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      align-items: center;
+      column-gap: 3%;
+      cursor: pointer;
+
+      img {
+        height: 2.5rem;
+        border-radius: 50%;
+        grid-row: 1 / 3;
+      }
+      .trendingTag {
+        font-size: 0.9rem;
+        font-weight: 500;
+      }
+      .trendingTitle {
+        font-size: 0.8rem;
+        font-weight: 400;
+        color: $font-secondary-color;
+      }
+    }
   }
 }
