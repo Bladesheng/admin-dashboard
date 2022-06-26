@@ -14,7 +14,7 @@ body {
   grid-row: 1/3;
   display: flex;
   flex-flow: column;
-  gap: 2%;
+  gap: 1.05rem;
   padding: 0 10%;
   background-color: rgb(47, 49, 54);
   font-size: 1rem;
@@ -79,20 +79,22 @@ header .profile {
   justify-content: flex-end;
   align-items: center;
   flex-direction: row;
-  gap: 12%;
+  gap: 1.7vw;
   font-weight: 700;
-  cursor: pointer;
 }
 header .profile svg {
   flex: 0 0 auto;
+  cursor: pointer;
 }
 header .profile img {
   flex: 0 0 auto;
   height: 35px;
   border-radius: 50%;
+  cursor: pointer;
 }
 header .profile span {
   flex: 0 0 auto;
+  cursor: pointer;
 }
 header .welcome {
   display: grid;
@@ -128,7 +130,7 @@ header .newButtons button {
   cursor: pointer;
 }
 
-main .tredingWrapper, main .announcementsWrapper {
+main .tredingWrapper, main .announcementsWrapper, main .projectWrapper .projectCard {
   border-radius: 5px;
   background-color: rgb(47, 49, 54);
 }
@@ -149,9 +151,38 @@ main h1 {
 }
 main .projectWrapper {
   grid-area: 2/1/6/2;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 1.5rem;
 }
-main .projectWrapper p {
-  background-color: rgb(47, 49, 54);
+main .projectWrapper .projectCard {
+  padding: 1.5rem 5%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  box-shadow: inset 55px 0px 0px -50px rgb(101, 85, 241);
+}
+main .projectWrapper .projectCard h2 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+main .projectWrapper .projectCard p {
+  flex: 1 1 auto;
+  font-size: 1rem;
+  font-weight: 400;
+  color: rgb(143, 146, 151);
+  cursor: pointer;
+}
+main .projectWrapper .projectCard div {
+  align-self: flex-end;
+  display: flex;
+  gap: 10px;
+}
+main .projectWrapper .projectCard div svg {
+  height: 1.5rem;
+  cursor: pointer;
 }
 main .announcementsWrapper {
   padding: 6%;
@@ -161,6 +192,7 @@ main .announcementsWrapper {
 }
 main .announcementsWrapper h3 {
   font-size: 1rem;
+  font-weight: 600;
   cursor: pointer;
 }
 main .announcementsWrapper p {
